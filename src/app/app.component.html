@@ -1,35 +1,4 @@
-<style>
-  nav.navbar {
-    height: 64px;
-    padding: 0;
-
-
-  }
-
-  nav.navbar     .navbar-brand {
-      padding: 0;
-      font-weight: 500;
-      font-size: 1.5rem;
-    }
-
-  .logo {
-    height: 48px;
-  }
-</style>
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
-  <div class="container-fluid">
-    <a href="/" class="navbar-brand">
-      <img class="logo" alt='Logo' src='/assets/logo.svg'>
-      Angular
-    </a>
-  </div>
-</nav>
+<app-navbar></app-navbar>
 <main class="container mt-5">
-  <div class="bg-light text-dark p-4 rounded shadow">
-    <h2>Lean Angular</h2>
-    <div>
-      Ein schlanker Weg, Angular zu meistern.
-    </div>
-  </div>
+  <router-outlet></router-outlet>
 </main>

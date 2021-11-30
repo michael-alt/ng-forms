@@ -1,0 +1,57 @@
+<style>
+  .logo {
+    height: 30px;
+    transform: translateY(-4px);
+  }
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <div class="container-fluid">
+    <a href="/" class="navbar-brand">
+      <img class="logo" alt="Logo" src="/assets/logo.svg" />
+      Angular Forms
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      (click)="isCollapsed = !isCollapsed"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      [ngbCollapse]="isCollapsed"
+      class="collapse navbar-collapse"
+      id="mainNav"
+    >
+      <ul (click)="isCollapsed = true" class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/plain" routerLinkActive="active"
+            >Plain HTML 5</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/template" routerLinkActive="active"
+            >Template Driven</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/reactive" routerLinkActive="active"
+            >Reactive</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
